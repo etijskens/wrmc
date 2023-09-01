@@ -4,3 +4,4 @@ xthi.nompi
 /build
 /cmake-build-debug
 /.idea
+*.e
