@@ -1,0 +1,16 @@
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=0  CPU=0  NUMA_node=0  CPU_affinity=0
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=1  CPU=1  NUMA_node=0  CPU_affinity=1
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=2  CPU=2  NUMA_node=0  CPU_affinity=2
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=3  CPU=3  NUMA_node=0  CPU_affinity=3
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=4  CPU=4  NUMA_node=0  CPU_affinity=4
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=5  CPU=5  NUMA_node=0  CPU_affinity=5
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=6  CPU=6  NUMA_node=0  CPU_affinity=6
+Label=B  Host=r3c02cn4  Pid=2947178  OMP_thread=7  CPU=7  NUMA_node=0  CPU_affinity=7
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=0  CPU= 8  NUMA_node=1  CPU_affinity= 8
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=1  CPU= 9  NUMA_node=1  CPU_affinity= 9
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=2  CPU=10  NUMA_node=1  CPU_affinity=10
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=3  CPU=11  NUMA_node=1  CPU_affinity=11
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=4  CPU=12  NUMA_node=1  CPU_affinity=12
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=5  CPU=13  NUMA_node=1  CPU_affinity=13
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=6  CPU=14  NUMA_node=1  CPU_affinity=14
+Label=A  Host=r3c02cn4  Pid=2947180  OMP_thread=7  CPU=15  NUMA_node=1  CPU_affinity=15

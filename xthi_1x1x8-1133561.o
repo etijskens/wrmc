@@ -1,0 +1,8 @@
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=0  CPU=0  NUMA_node=0  CPU_affinity=0
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=1  CPU=1  NUMA_node=0  CPU_affinity=1
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=2  CPU=2  NUMA_node=0  CPU_affinity=2
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=3  CPU=3  NUMA_node=0  CPU_affinity=3
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=4  CPU=4  NUMA_node=0  CPU_affinity=4
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=5  CPU=5  NUMA_node=0  CPU_affinity=5
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=6  CPU=6  NUMA_node=0  CPU_affinity=6
+Label=A  Host=r5c05cn4  Pid=2457688  OMP_thread=7  CPU=7  NUMA_node=0  CPU_affinity=7
