@@ -1,20 +1,8 @@
-# David's alternative implementation of Cray's xthi example code
+# Alternative implementation of xthi example code
 
 ## Background
 
-I attended some ARCHER2 training recently, and they used some example code from Cray
-called **xthi** to show the CPU affinity of each process/thread when running parallel
-codes on ARCHER2. This is really handy for playing around with running such codes
-using job schedulers (e.g. Slurm) or with low-level CPU affinity controls.
-
-I subsequently had a bit of a play with the original code to add in some
-additional information to support the development of the School's new Slurm-based
-Compute Cluster, and ended up effectively rewriting it from scratch in order to get
-a more controlled output. (My version however still uses the same helper function from
-util-linux as the original code - see below for details).
-
-This code has been packaged up for the SoPA Ubuntu Linux platform.
-See: https://git.ecdf.ed.ac.uk/sopacst/ubuntu/xthi
+Modified after https://git.ecdf.ed.ac.uk/dmckain/xthi
 
 ## Usage
 
@@ -27,10 +15,11 @@ Choose which one you want to use to suit your needs as follows:
 
 The code should be launched in the same way as any MPI and/or OpenMP code.
 
-My version of this code also allows you to specify an optional "CPU chew time" (in seconds).
-This will cause each task/thread to do some pointless CPU work for (roughly) that
-amount of time, which can be useful for running lots of codes at once or for
-watching what each CPU core is doing with tools like `htop`.
+Command line arguments 
+
+* a positive number [optional, defaults to 10]: number of seconds to do some random work
+* a string [optional]: Label, useful to distinguish multiple calls in the job script
+* "-v" [optional]: verbose mode, prints the command line argumnents as parsed.
 
 Here are some examples:
 

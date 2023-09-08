@@ -1,11 +1,17 @@
 /*
- * xthi - alternative implementation for the School of Physics & Astronomy
- *
- * Full details: https://git.ecdf.ed.ac.uk/dmckain/xthi
+ * xthi - alternative implementation for Calcua
+ *  
+ * Based on: https://git.ecdf.ed.ac.uk/dmckain/xthi
  */
 #ifdef __linux__
-#define _GNU_SOURCE
+#  define _GNU_SOURCE
 #endif
+
+#include <ctype.h>
+#include <errno.h>
+#include <limits.h>
+#include <stdio.h>
+
 #include <assert.h>
 #include <time.h>
 #include <stdlib.h>
@@ -13,63 +19,73 @@
 #include <string.h>
 #include <unistd.h>
 #include <omp.h>
+
 #ifndef NO_MPI
-#include <mpi.h>
+#  include <mpi.h>
 #endif
+
 #ifdef __linux__
-#include <sched.h>
-#include <numa.h>
+#  include <sched.h>
+#  include <numa.h>
 #endif
 
 #define HOSTNAME_MAX_LENGTH 64 // Max hostname length before truncation
 #define RECORD_SIZE 128 // Max per-thread/process record size
 #define RECORD_WORDS 8 // Number of words in each record
 
+#define DEBUGINFO 
+
 // Brief usage instructions
-const char *usage = "Enhanced version of Cray's wee xthi \"where am I running?\" parallel code.\n"
-                    "\n"
-                    "Usage:\n"
-                    "     xthi label cpu_chew_seconds\n"
-                    "*or* xthi.nompi label cpu_chew_seconds\n"
-                    "\n"
-                    "Full details: https://git.ecdf.ed.ac.uk/dmckain/xthi\n";
+const char *usage = 
+    "Enhanced version of Cray's wee xthi \"where am I running?\" parallel code.\n"
+    "\n"
+    "Usage:\n"
+    "     xthi [label] [cpu_chew_seconds]\n"
+    "*or* xthi.nompi [label] [cpu_chew_seconds]\n"
+    "\n"
+    "\n"
+    ;
 
 void do_xthi(long chew_cpu_secs, char * label);
 void output_records(const char *records, int count, const char **heads);
 void update_widths(size_t *widths, const char *record);
 void format_record(const char *record, const size_t *sizes, const char **heads);
 void chew_cpu(long chew_cpu_secs);
-int parse_args(int argc, char *argv[], char** label, long *chew_cpu_secs);
+int parse_args(int argc, char *argv[], char** label, long *chew_cpu_secs, int* verbose);
+
 #ifdef __linux__
-char *cpuset_to_cstr(cpu_set_t *mask, char *str);
+  char *cpuset_to_cstr(cpu_set_t *mask, char *str);
 #endif
 
 #ifdef __linux__
-static const int is_linux = 1;
+  static const int is_linux = 1;
 #else
-static const int is_linux = 0;
+  static const int is_linux = 0;
 #endif
 
 #ifndef NO_MPI
-static const int is_mpi = 1;
+  static const int is_mpi = 1;
 #else
-static const int is_mpi = 0;
+  static const int is_mpi = 0;
 #endif
 
 
 int main(int argc, char *argv[])
 {
     int exit_code = EXIT_SUCCESS;
+
+ // variables to hold the command line argumenrs
     long chew_cpu_secs = 0L;
     char * label;
+    int verbose = 0;
   
   #ifndef NO_MPI
     MPI_Init(&argc, &argv);
   #endif
 
-    if (parse_args(argc, argv, &label, &chew_cpu_secs)) 
+    if (parse_args(argc, argv, &label, &chew_cpu_secs, &verbose)) 
     {// Command line args are good => do xthi work
-        do_xthi(chew_cpu_secs, argv[1]);
+        do_xthi(chew_cpu_secs, label);
     }
     else
     { // Bad args => return failure
@@ -104,7 +120,7 @@ void do_xthi(long chew_cpu_secs, char* label)
     gethostname(hostname_buf, HOSTNAME_MAX_LENGTH);
     char *dot_ptr = strchr(hostname_buf, '.');
     if (dot_ptr != NULL)
-        *dot_ptr = '\0';
+       //dot_ptr = '\0';
     
 
  // Launch OpenMP threads and gather data
@@ -289,24 +305,135 @@ void format_record(const char *record, const size_t *sizes, const char **heads)
 }
 
 
-/* Parses command line arguments.
- *
- * Just chew_cpu_secs for now, but might become more exciting later!
- *
- * Returns 1 if all good, 0 otherwise.
- */
-int parse_args(int argc, char *argv[], char** label, long *chew_cpu_secs)
-{
-    if (argc!=3) {
+typedef enum {
+    STR2INT_SUCCESS,
+    STR2INT_OVERFLOW,
+    STR2INT_UNDERFLOW,
+    STR2INT_INCONVERTIBLE
+} str2int_errno;
+
+str2int_errno str2int(int *out, char *s, int base) 
+{// Convert string s to int out. 
+ // from https://stackoverflow.com/questions/7021725/how-to-convert-a-string-to-integer-in-c
+ //
+ // @param[out] out The converted int. Cannot be NULL.
+ //
+ // @param[in] s Input string to be converted.
+ //
+ //     The format is the same as strtol,
+ //     except that the following are inconvertible:
+ //
+ //     - empty string
+ //     - leading whitespace
+ //     - any trailing characters that are not part of the number
+ //
+ //     Cannot be NULL.
+ //
+ // @param[in] base Base to interpret string in. Same range as strtol (2 to 36).
+ //
+ // @return Indicates if the operation succeeded, or why it failed.
+  #ifdef DEBUGINFO
+    printf("DEBUGINFO[str2int] s=<%s>\n", s);
+  #endif
+    char *end;
+    if (s[0] == '\0' || isspace(s[0]))
+        return STR2INT_INCONVERTIBLE;
+    errno = 0;
+    long l = strtol(s, &end, base);
+    /* Both checks are needed because INT_MAX == LONG_MAX is possible. */
+    if (l > INT_MAX || (errno == ERANGE && l == LONG_MAX)) {
+      #ifdef DEBUGINFO
+        printf("DEBUGINFO[str2int] s=<%s> -> STR2INT_OVERFLOW\n", s);
+      #endif
+        return STR2INT_OVERFLOW;
+    }
+    if (l < INT_MIN || (errno == ERANGE && l == LONG_MIN)) {
+      #ifdef DEBUGINFO
+        printf("DEBUGINFO[str2int] s=<%s> -> STR2INT_UNDERFLOW\n", s);
+      #endif
+        return STR2INT_UNDERFLOW;
+    }
+    if (*end != '\0') {
+      #ifdef DEBUGINFO
+        printf("DEBUGINFO[str2int] s=<%s> -> STR2INT_INCONVERTIBLE\n", s);
+      #endif
+        return STR2INT_INCONVERTIBLE;
+    }
+    
+    *out = l;
+  #ifdef DEBUGINFO
+    printf("DEBUGINFO[str2int] s=<%s> -> %li/n", s, l);
+  #endif
+    return STR2INT_SUCCESS;
+}
+
+int min (int a, int b) {return (a > b) ? b: a;}
+
+int parse_args(int argc, char *argv[], char** label, long *chew_cpu_secs, int* verbose)
+{// Parses command line arguments.
+ //
+ // Just chew_cpu_secs for now, but might become more exciting later!
+ //
+ // Returns 1 if all good, 0 otherwise.
+
+    int const max_args = 4;
+    if (argc > max_args) {
         fputs(usage, stderr);
         return 0;
     }
-
-    *label = argv[1];
-
-    char **endptr = &argv[2];
-    *chew_cpu_secs = strtol(argv[1], endptr, 10);
-
+    
+    long seconds = 10;
+    int seconds_ok = 0;
+    char *str = NULL; 
+    int str_ok = 0;
+    for (int i=1; i<min(argc, max_args); ++i) {
+      #ifdef DEBUGINFO
+        printf("DEBUGINFO[parse_args] iarg=%d\n", i);
+      #endif
+        int tmp;
+        str2int_errno e = str2int(&tmp, argv[i], 10);
+        if (e == STR2INT_SUCCESS && !seconds_ok) 
+        {// accept argv[i] is a number -> chew_cpu_secs
+            seconds = tmp;
+            seconds_ok = 1;
+          #ifdef DEBUGINFO
+            printf("DEBUGINFO[parse_args] parsing seconds (%d)\n", tmp);
+          #endif
+        } else
+        {// accept argv[i] is a string -> label or "-v"
+          #ifdef DEBUGINFO
+            printf("DEBUGINFO[parse_args] parsing string: argv[i=%d]=%s\n", i, argv[i]);
+          #endif
+            if (strcmp(argv[i], "-v") == 0) {
+                *verbose = 1;
+              #ifdef DEBUGINFO
+                printf("DEBUGINFO[parse_args] parsing \"-v\" (verbose=1)\n");
+              #endif
+            } else if (!str_ok) {
+                str = argv[i];
+                str_ok = 1;
+              #ifdef DEBUGINFO
+                printf("DEBUGINFO[parse_args] parsing label (%s)\n", str);
+              #endif
+            }
+        } 
+    }
+    
+    *label = str;
+    *chew_cpu_secs = seconds;
+    if (*verbose) {
+        printf("Running with options:\n");
+        if (seconds_ok) {
+            printf("  Duration set to: %li\n", *chew_cpu_secs);
+        } else {
+            printf("  Default duration: %li\n", *chew_cpu_secs);
+        }
+        if (str_ok) {
+            printf("  Label set to: %s\n", *label);
+        } else {
+            printf("  Default label: %s\n", *label);
+        }        
+    }
     return 1;
 }
 
@@ -345,7 +472,7 @@ int parse_args(int argc, char *argv[], char** label, long *chew_cpu_secs)
             }
         }
         ptr -= entry_made;
-        *ptr = 0;
+       //ptr = 0;
         return str;
     }
 #endif
