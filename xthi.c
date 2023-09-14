@@ -33,7 +33,7 @@
 #define RECORD_SIZE 128 // Max per-thread/process record size
 #define RECORD_WORDS 8 // Number of words in each record
 
-#define DEBUGINFO 
+// #define DEBUGINFO 
 
 // Brief usage instructions
 const char *usage = 
@@ -362,7 +362,7 @@ str2int_errno str2int(int *out, char *s, int base)
     
     *out = l;
   #ifdef DEBUGINFO
-    printf("DEBUGINFO[str2int] s=<%s> -> %li/n", s, l);
+    printf("DEBUGINFO[str2int] s=<%s> -> %li\n", s, l);
   #endif
     return STR2INT_SUCCESS;
 }

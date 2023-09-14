@@ -17,9 +17,9 @@ module load hwloc
 PATH=./build:$PATH
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-export OMP_PROC_BIND=true
-export I_MPI_PIN_DOMAIN=omp,compact
+# export OMP_PROC_BIND=true
+# export I_MPI_PIN_DOMAIN=omp,compact
 
-srun --quiet -n4 -c2 xthi A 10 &
-srun --quiet -n4 -c2 xthi B 10 &
+srun --quiet -n4 -c2 --exclusive --unbuffered xthi A 10 &
+srun --quiet -n4 -c2 --exclusive --unbuffered xthi B 10 &
 wait
