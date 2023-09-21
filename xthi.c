@@ -108,6 +108,9 @@ void do_xthi(long chew_cpu_secs, char* label)
     char *thread_data = NULL;
 
   #ifndef NO_MPI
+    int mpi_tag = (label) ? label[0] : 0;
+    printf("DEBUGINFO[do_xthi] tag=<%d>\n", mpi_tag);
+
     int mpi_size;
     MPI_Comm_rank(MPI_COMM_WORLD, &mpi_rank);
     MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
@@ -122,7 +125,6 @@ void do_xthi(long chew_cpu_secs, char* label)
     if (dot_ptr != NULL)
        //dot_ptr = '\0';
     
-
  // Launch OpenMP threads and gather data
  // Each thread will store RECORD_SIZE characters, stored as a flat single array
     thread_data = malloc(sizeof(char) * omp_get_max_threads() * RECORD_SIZE);
@@ -178,7 +180,7 @@ void do_xthi(long chew_cpu_secs, char* label)
     // MPI tasks aggregate data back to manager process (mpi_rank==0)
     if (mpi_rank != 0)
     {// This is a worker - send data to manager
-        MPI_Ssend(thread_data, RECORD_SIZE * num_threads, MPI_CHAR, 0, 0, MPI_COMM_WORLD);
+        MPI_Ssend(thread_data, RECORD_SIZE * num_threads, MPI_CHAR, 0, mpi_tag, MPI_COMM_WORLD);
     }
     else
     {// This is the manager - gather data from each worker
@@ -192,7 +194,7 @@ void do_xthi(long chew_cpu_secs, char* label)
         for (int j=1; j<mpi_size; ++j) {
             MPI_Recv(all_data + RECORD_SIZE * num_threads * j,
                      RECORD_SIZE * num_threads, MPI_CHAR,
-                     j, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                     j, mpi_tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         }
 
         output_records(all_data, all_size, heads);

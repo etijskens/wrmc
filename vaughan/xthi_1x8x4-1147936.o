@@ -1,0 +1,57 @@
+n=8
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Running with options:
+  Duration set to: 10
+  Label set to: A
+Label=A  Host=r5c07cn4.vaughan  Pid=1746993  MPI_rank=0  OMP_thread=0  CPU= 2  NUMA_node=0  CPU_affinity=  0-3,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746993  MPI_rank=0  OMP_thread=1  CPU= 0  NUMA_node=0  CPU_affinity=  0-3,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746993  MPI_rank=0  OMP_thread=2  CPU= 3  NUMA_node=0  CPU_affinity=  0-3,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746993  MPI_rank=0  OMP_thread=3  CPU= 1  NUMA_node=0  CPU_affinity=  0-3,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746994  MPI_rank=1  OMP_thread=0  CPU= 5  NUMA_node=0  CPU_affinity=  4-7,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746994  MPI_rank=1  OMP_thread=1  CPU= 7  NUMA_node=0  CPU_affinity=  4-7,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746994  MPI_rank=1  OMP_thread=2  CPU= 6  NUMA_node=0  CPU_affinity=  4-7,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746994  MPI_rank=1  OMP_thread=3  CPU= 4  NUMA_node=0  CPU_affinity=  4-7,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746995  MPI_rank=2  OMP_thread=0  CPU=10  NUMA_node=1  CPU_affinity= 8-11,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746995  MPI_rank=2  OMP_thread=1  CPU= 9  NUMA_node=1  CPU_affinity= 8-11,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746995  MPI_rank=2  OMP_thread=2  CPU= 8  NUMA_node=1  CPU_affinity= 8-11,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746995  MPI_rank=2  OMP_thread=3  CPU=11  NUMA_node=1  CPU_affinity= 8-11,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746996  MPI_rank=3  OMP_thread=0  CPU=12  NUMA_node=1  CPU_affinity=12-15,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746996  MPI_rank=3  OMP_thread=1  CPU=13  NUMA_node=1  CPU_affinity=12-15,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746996  MPI_rank=3  OMP_thread=2  CPU=15  NUMA_node=1  CPU_affinity=12-15,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746996  MPI_rank=3  OMP_thread=3  CPU=14  NUMA_node=1  CPU_affinity=12-15,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746997  MPI_rank=4  OMP_thread=0  CPU=32  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746997  MPI_rank=4  OMP_thread=1  CPU=35  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746997  MPI_rank=4  OMP_thread=2  CPU=34  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746997  MPI_rank=4  OMP_thread=3  CPU=33  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746998  MPI_rank=5  OMP_thread=0  CPU=37  NUMA_node=4  CPU_affinity=36-39,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746998  MPI_rank=5  OMP_thread=1  CPU=38  NUMA_node=4  CPU_affinity=36-39,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746998  MPI_rank=5  OMP_thread=2  CPU=36  NUMA_node=4  CPU_affinity=36-39,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746998  MPI_rank=5  OMP_thread=3  CPU=39  NUMA_node=4  CPU_affinity=36-39,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746999  MPI_rank=6  OMP_thread=0  CPU=40  NUMA_node=5  CPU_affinity=40-43,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746999  MPI_rank=6  OMP_thread=1  CPU=43  NUMA_node=5  CPU_affinity=40-43,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746999  MPI_rank=6  OMP_thread=2  CPU=42  NUMA_node=5  CPU_affinity=40-43,
+Label=A  Host=r5c07cn4.vaughan  Pid=1746999  MPI_rank=6  OMP_thread=3  CPU=41  NUMA_node=5  CPU_affinity=40-43,
+Label=A  Host=r5c07cn4.vaughan  Pid=1747000  MPI_rank=7  OMP_thread=0  CPU=44  NUMA_node=5  CPU_affinity=44-47,
+Label=A  Host=r5c07cn4.vaughan  Pid=1747000  MPI_rank=7  OMP_thread=1  CPU=46  NUMA_node=5  CPU_affinity=44-47,
+Label=A  Host=r5c07cn4.vaughan  Pid=1747000  MPI_rank=7  OMP_thread=2  CPU=47  NUMA_node=5  CPU_affinity=44-47,
+Label=A  Host=r5c07cn4.vaughan  Pid=1747000  MPI_rank=7  OMP_thread=3  CPU=45  NUMA_node=5  CPU_affinity=44-47,
