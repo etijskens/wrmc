@@ -1,4 +1,0 @@
-/user/antwerpen/201/vsc20170/vsc_data/xthi/build/CMakeFiles/rebuild_cache.dir
-/user/antwerpen/201/vsc20170/vsc_data/xthi/build/CMakeFiles/edit_cache.dir
-/user/antwerpen/201/vsc20170/vsc_data/xthi/build/CMakeFiles/xthi.nompi.dir
-/user/antwerpen/201/vsc20170/vsc_data/xthi/build/CMakeFiles/xthi.dir

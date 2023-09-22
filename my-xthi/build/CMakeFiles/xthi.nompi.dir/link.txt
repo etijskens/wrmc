@@ -1,1 +1,0 @@
-/apps/antwerpen/zen2/rocky8/GCCcore/11.3.0/bin/cc CMakeFiles/xthi.nompi.dir/xthi.c.o -o xthi.nompi  -lnuma /apps/antwerpen/zen2/rocky8/GCCcore/11.3.0/lib64/libgomp.so /lib64/libpthread.so 
