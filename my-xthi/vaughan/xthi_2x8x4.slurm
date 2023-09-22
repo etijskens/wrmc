@@ -26,6 +26,6 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export n=$((${SLURM_NTASKS} / 2))
 echo "n=$n"
 
-srun --quiet -n${n} -c${SLURM_CPUS_PER_TASK} --exclusive --unbuffered ../build/xthi A 10 -v &
-srun --quiet -n${n} -c${SLURM_CPUS_PER_TASK} --exclusive --unbuffered ../build/xthi B 10 -v &
+srun --quiet -n${n} -c${SLURM_CPUS_PER_TASK} --exclusive --unbuffered ../build/xthi A 10 &
+srun --quiet -n${n} -c${SLURM_CPUS_PER_TASK} --exclusive --unbuffered ../build/xthi B 10 &
 wait

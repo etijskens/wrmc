@@ -1,0 +1,97 @@
+n=8
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+DEBUGINFO[do_xthi] tag=<65>
+DEBUGINFO[do_xthi] tag=<65>
+DEBUGINFO[do_xthi] tag=<65>
+DEBUGINFO[do_xthi] tag=<66>
+DEBUGINFO[do_xthi] tag=<66>
+Label=A  Host=r3c05cn4.vaughan  Pid=1968427  MPI_rank=0  OMP_thread=0  CPU=12  NUMA_node=1  CPU_affinity=12-15,Label=B  Host=r3c05cn4.vaughanLabel=A  Host=r3c05cn4.v
+Label=A  Host=r3c05cn4.vaughan  Pid=1968423  MPI_rank=0  OMP_thread=0  CPU=17  NUMA_node=2  CPU_affinity=16-19,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968423  MPI_rank=0  OMP_thread=1  CPU=18  NUMA_node=2  CPU_affinity=16-19,
+Label=B  Host=r3c05cnaughan  Pid=19684Label=B  Host=r3c05cn4.vaughan  Pid=1968426  MPI_rank=0  OMP_thread=0    Pid=1968427  MPI_rank=0  OMP_thread=1  4.vaughan  Pid=1968423  MPI_rank=0  OMP_thread=2  CPU=16  NUMA_node=2  CPU_affinity=16-19,
+29  MPI_rank=0  OMP_thread=0  CPU=36  NUMA_node=4CPU=24  NUMA_node=3  CPU_affinity=24-27,
+Label=B  Host=r3cCPU=14  NUMA_node=1  CPU_affinity=12-15,
+Label=Label=B  Host=r3c05cn4.vaughan  Pid=1968423  MPI_rank=0  OMP_thread=3  CPU_affinity=36-39,
+Label=A  Host=r305cn4.vaughan  Pid=1968426  MPI_rank=0  A  Host=r3c05cn4.vau  CPU=19  NUMA_node=2OMP_thread=1  CPU=25  NUMA_node=3  CPU_affinity=24-27,
+c05cn4.vaughan  Pid=196842Label=B  Host=r  CPU_affinity=16-19,
+3c05cn4.vaughan  Pid=1968426  MPI_rank=0  OMP_thread=2  ghan  Pid=1968427  MPI_rank=0  OMP_thread=2CPU=27  NUMA_node=3  CPU_affinity=24-27,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968426  MPI_rank=0  OMP_thread=3  CPU=26  NUMA_node=3  CPU_affinity=9  MPI_rank=0  OMP_thread=1  CPU=37  NUMA_node=4  CPU_affinity=36-324-27,
+  CPU=15  NUMA_node=1  CPU_affinity=12-9,
+Label=A  Host=r3c05cn4.15,
+Label=A  Host=r3c05cn4.vauvaughan  Pid=1968429  MPI_rank=0  OMP_thread=2ghan  Pid=196842  CPU=39  NUMA_node=4  CPU_affinity=36-397  MPI_rank=0  OMP_thread=3  CPU=13  NUMA_node=1  CPU_affinity=,
+Label=A  Host=r3c05cn4.va12-15,
+ughan  Pid=1968429  MPI_rank=0  OMP_thread=3  CPU=38  NUMA_node=4  CPU_affinity=36-39,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968428  MPI_rank=0  OMP_thread=0  CPU=32  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968428  MPI_rank=0  OMP_thread=1  CPU=34  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968428  MPI_rank=0  OMP_thread=2  CPU=35  NUMA_node=4  CPU_affinity=32-35,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968428  MPI_rank=0  OMP_thread=3  CPU=33  NUMA_node=4  CPU_affinity=32-35,
+DEBUGINFO[do_xthi] tag=<66>
+DEBUGINFO[do_xthi] tag=<66>
+Label=B  Host=r3c05cn4.vaughan  Pid=1968433  MPI_rank=0  OMP_thread=0  CPU=50  NUMA_node=6  CPU_affinity=48-51,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968433  MPI_rank=0  OMP_thread=1  CPU=49  NUMA_node=6  CPU_affinity=48-51,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968433  MPI_rank=0  OMP_thread=2  CPU=48  NUMA_node=6  CPU_affinity=48-51,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968433  MPI_rank=0  OMP_thread=3  CPU=51  NUMA_node=6  CPU_affinity=48-51,
+DEBUGINFO[do_xthi] tag=<66>
+DEBUGINFO[do_xthi] tag=<65>
+Label=A  Host=r3c05cn4.vaughan  Pid=1968424  MPI_rank=0  OMP_thread=0  CPU= 8  NUMA_node=DEBUGINFO[do_xthi] tag=<66>
+1  CPU_affinity=8-11,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968424  MPI_rank=0  OMP_thread=1  CPU=11  NUMA_node=1  CPU_affinity=8-11,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968424  MPI_rank=0  OMP_thread=2  CPU=10  NUMA_node=1DEBUGINFO[do_xthi] tag=<66>
+  CPU_affinity=8-11,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968424  MPI_rank=0  OMP_thread=3  CPU= 9  NUMA_node=1  CPU_affinity=8-11,
+DEBUGINFO[do_xthi] tag=<65>
+DEBUGINFO[do_xthi] tag=<66>
+Label=A  Host=r3c05cn4.vaLabel=B  Host=r3c05cn4.vauughan  Pid=196ghan  Pid=19684258430  MPI_rank=0  OMP_thread=0  CPU=41  NUMA_node=  MPI_rank=0  OMP_thread=0  CPU=20  5  CPU_affinity=40-43,
+NUMA_node=2  CPU_affinity=20-Label=23,
+A  Host=r3c05cn4.Label=B  Host=r3c05cn4.vaughan  Pid=vaughan  Pid=1961968425  MPI_rank=0  OMP_thread=1  CPU=23  8430  MPI_rank=0  OMP_thread=1  CPU=43  NUMA_node=5  CPU_affinity=NUMA_node=2  CPU_affinity=20-40-43,
+23,
+Label=B  Host=r3c05cn4Label=A  Host=r3c05cn4.vaughanLabel=B  Host=r3c05cn4.vaughan  Pid=19  Pid=1968430  MPI_rank=.vaughan  Pid=19680  OMP_thread=2  CPU=40  NUMA_node=68434  MPI_rank=0  OMP_thread=0  CPU=53  NUMA_node=6  CPU_affinity=55  CPU_affinity=40-43,
+Label=A425  MPI_rank=0  OMP_thread=2  CPU=22  NUMA_node=2  CPU_affinity=  Host=r3c05cn4.va2-55,
+Label=B  Host=r3c05cn4.vauughan  Pid=1968430  20-23,
+Label=B  Host=rghan  Pid=1968434  MPI_rank=0  MPI_rank=0  OMP_thread=3  CPU=42  NUMA_node=5  CPU_affinity=40-43c05cn4.vaughan  Pid=1963,
+OMP_thread=1  CPU=55  NUMA_node=6  CPU_affinity=52-55,
+Label=B  Host=r8425  MPI_rank=0  OMP_thread=3  CPU=21  3c05cn4.vaughan  Pid=1968434  MPI_rank=0  NUMA_node=2  CPU_affinity=20-23,
+OMP_thread=2  CPU=52  NUMA_node=6  CPU_affinity=52-55,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968434  MPI_rank=0  OMP_thread=3  CPU=54  NUMA_node=6  CPU_affinity=52-55,
+DEBUGINFO[do_xthi] tag=<65>
+DEBUGINFO[do_xthi] tag=<65>
+DEBUGINFO[do_xthi] tag=<65>
+Label=A  Host=r3c05cn4.vaughan  Pid=1968422  MPI_rank=0  OMP_thread=0  CPU=4  NUMA_node=0  CPU_affinity=4-7,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968422  MPI_rank=0  Label=B  Host=r3c05cn4OMP_thread=1  CPU=5  .vaughan  Pid=NUMA_node=0  CPU_affinity=4-7,
+Label=A  Host=r3c05cn41968432  MPI_rank=0  OMP_thread=.vaughan  0  CPU=28  NUMA_node=3  Pid=1968422  CPU_affinity=28-31,
+MPI_rank=0  OMP_thread=2  CPU=7  NUMA_node=0Label=B  Host=r3c05cn4.vaughan  CPU_affinity=4-7,
+Label=A  Host=r3c05cn4.va  Pid=1968432  MPI_rank=0  OMP_thread=1  CPU=30  NUMA_node=3  ughan  Pid=1968422  CPU_affinity=28-31,
+Label=B  Host=r3c0MPI_rank=0  OMP_thread=3  CPU=6  NUMA_node=5cn4.vaugh0  CPU_affinity=4-7,
+an  Pid=1968432  MPI_rank=0  OMP_thread=2  CPU=31  NUMA_node=3  CPU_affinity=28-31,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968432  MPI_rank=0  OMP_thread=3  CPU=29  NUMA_node=3  CPU_affinity=28-31,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968421  MPI_rank=0  OMP_thread=0  CPU=0  NUMA_node=0  CPU_affinity=0-3,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968421  MPI_rank=0  OMP_thread=1  CPU=2  NUMA_node=0  CPU_affinity=0-3,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968421  MPI_rank=0  OMP_thread=2  CPU=3  NUMA_node=0  CPU_affinity=0-3,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968421  MPI_rank=0  OMP_thread=3  CPU=1  NUMA_node=0  CPU_affinity=0-3,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968435  MPI_rank=0  OMP_thread=0  CPU=59  NUMA_node=7  CPU_affinity=56-59,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968435  MPI_rank=0  OMP_thread=1  CPU=57  NUMA_node=7  CPU_affinity=56-59,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968435  MPI_rank=0  OMP_thread=2  CPU=58  NUMA_node=7  CPU_affinity=56-59,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968435  MPI_rank=0  OMP_thread=3  CPU=56  NUMA_node=7  CPU_affinity=56-59,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968431  MPI_rank=0  OMP_thread=0  CPU=46  NUMA_node=5  CPU_affinity=44-47,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968431  MPI_rank=0  OMP_thread=1  CPU=45  NUMA_node=5  CPU_affinity=44-47,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968431  MPI_rank=0  OMP_thread=2  CPU=44  NUMA_node=5  CPU_affinity=44-47,
+Label=A  Host=r3c05cn4.vaughan  Pid=1968431  MPI_rank=0  OMP_thread=3  CPU=47  NUMA_node=5  CPU_affinity=44-47,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968436  MPI_rank=0  OMP_thread=0  CPU=61  NUMA_node=7  CPU_affinity=60-63,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968436  MPI_rank=0  OMP_thread=1  CPU=63  NUMA_node=7  CPU_affinity=60-63,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968436  MPI_rank=0  OMP_thread=2  CPU=60  NUMA_node=7  CPU_affinity=60-63,
+Label=B  Host=r3c05cn4.vaughan  Pid=1968436  MPI_rank=0  OMP_thread=3  CPU=62  NUMA_node=7  CPU_affinity=60-63,
