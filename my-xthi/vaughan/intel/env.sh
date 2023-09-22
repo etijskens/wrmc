@@ -3,4 +3,5 @@
 module --force purge
 ml calcua/2022a
 ml intel
+ml cmake
 ml

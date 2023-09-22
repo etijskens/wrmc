@@ -18,3 +18,5 @@ target_link_libraries(xthi PUBLIC MPI::MPI_C OpenMP::OpenMP_C $<$<PLATFORM_ID:Li
 add_executable(xthi.nompi xthi.c)
 target_compile_definitions(xthi.nompi PUBLIC NO_MPI=1)
 target_link_libraries(xthi.nompi PUBLIC OpenMP::OpenMP_C $<$<PLATFORM_ID:Linux>:numa>)
+
+install(TARGETS xthi xthi.nompi)
