@@ -1,0 +1,63 @@
+
+Currently Loaded Modules:
+  1) calcua/2022a                      16) UCC/1.0.0-GCCcore-11.3.0
+  2) GCCcore/11.3.0                    17) OpenMPI/4.1.4-GCC-11.3.0
+  3) zlib/1.2.12-GCCcore-11.3.0        18) OpenBLAS/0.3.20-GCC-11.3.0
+  4) binutils/2.38-GCCcore-11.3.0      19) FlexiBLAS/3.2.0-GCC-11.3.0
+  5) GCC/11.3.0                        20) FFTW/3.3.10-GCC-11.3.0
+  6) numactl/2.0.14-GCCcore-11.3.0     21) gompi/2022a
+  7) XZ/5.2.5-GCCcore-11.3.0           22) FFTW.MPI/3.3.10-gompi-2022a
+  8) libxml2/2.9.13-GCCcore-11.3.0     23) ScaLAPACK/2.2.0-gompi-2022a-fb
+  9) libpciaccess/0.16-GCCcore-11.3.0  24) foss/2022a
+ 10) hwloc/2.7.1-GCCcore-11.3.0        25) ncurses/6.3-GCCcore-11.3.0
+ 11) OpenSSL/1.1                       26) bzip2/1.0.8-GCCcore-11.3.0
+ 12) libevent/2.1.12-GCCcore-11.3.0    27) cURL/7.83.0-GCCcore-11.3.0
+ 13) UCX/1.12.1-GCCcore-11.3.0         28) libarchive/3.6.1-GCCcore-11.3.0
+ 14) libfabric/1.15.1-GCCcore-11.3.0   29) CMake/3.24.3-GCCcore-11.3.0
+ 15) PMIx/4.1.2-GCCcore-11.3.0
+
+Running hello_4x2x4.slurm on calcua/vaughan
+n_sruns    = 4
+n_mpi/srun = 2
+n_opm/mpi  = 4
+
+srun=0 Host=r5c03cn2.vaughan  Pid=3496212  MPI_rank=001/002                      CPU=32
+srun=0 Host=r5c03cn2.vaughan  Pid=3496212  MPI_rank=001/002  OMP_thread=000/004  CPU=32  NUMA_node=4  CPU_affinity=32,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496211  MPI_rank=000/002                      CPU=0
+srun=0 Host=r5c03cn2.vaughan  Pid=3496212  MPI_rank=001/002  OMP_thread=002/004  CPU=34  NUMA_node=4  CPU_affinity=34,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496212  MPI_rank=001/002  OMP_thread=003/004  CPU=35  NUMA_node=4  CPU_affinity=35,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496212  MPI_rank=001/002  OMP_thread=001/004  CPU=33  NUMA_node=4  CPU_affinity=33,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496211  MPI_rank=000/002  OMP_thread=000/004  CPU=0  NUMA_node=0  CPU_affinity=0,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496211  MPI_rank=000/002  OMP_thread=003/004  CPU=3  NUMA_node=0  CPU_affinity=3,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496211  MPI_rank=000/002  OMP_thread=002/004  CPU=2  NUMA_node=0  CPU_affinity=2,
+srun=0 Host=r5c03cn2.vaughan  Pid=3496211  MPI_rank=000/002  OMP_thread=001/004  CPU=1  NUMA_node=0  CPU_affinity=1,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496266  MPI_rank=000/002                      CPU=0
+srun=1 Host=r5c03cn2.vaughan  Pid=3496267  MPI_rank=001/002                      CPU=32
+srun=1 Host=r5c03cn2.vaughan  Pid=3496266  MPI_rank=000/002  OMP_thread=000/004  CPU=0  NUMA_node=0  CPU_affinity=0,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496266  MPI_rank=000/002  OMP_thread=002/004  CPU=2  NUMA_node=0  CPU_affinity=2,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496266  MPI_rank=000/002  OMP_thread=003/004  CPU=3  NUMA_node=0  CPU_affinity=3,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496266  MPI_rank=000/002  OMP_thread=001/004  CPU=1  NUMA_node=0  CPU_affinity=1,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496267  MPI_rank=001/002  OMP_thread=000/004  CPU=32  NUMA_node=4  CPU_affinity=32,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496267  MPI_rank=001/002  OMP_thread=002/004  CPU=34  NUMA_node=4  CPU_affinity=34,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496267  MPI_rank=001/002  OMP_thread=001/004  CPU=33  NUMA_node=4  CPU_affinity=33,
+srun=1 Host=r5c03cn2.vaughan  Pid=3496267  MPI_rank=001/002  OMP_thread=003/004  CPU=35  NUMA_node=4  CPU_affinity=35,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496314  MPI_rank=001/002                      CPU=32
+srun=2 Host=r5c03cn2.vaughan  Pid=3496314  MPI_rank=001/002  OMP_thread=000/004  CPU=32  NUMA_node=4  CPU_affinity=32,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496314  MPI_rank=001/002  OMP_thread=001/004  CPU=33  NUMA_node=4  CPU_affinity=33,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496314  MPI_rank=001/002  OMP_thread=003/004  CPU=35  NUMA_node=4  CPU_affinity=35,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496314  MPI_rank=001/002  OMP_thread=002/004  CPU=34  NUMA_node=4  CPU_affinity=34,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496313  MPI_rank=000/002                      CPU=0
+srun=2 Host=r5c03cn2.vaughan  Pid=3496313  MPI_rank=000/002  OMP_thread=000/004  CPU=0  NUMA_node=0  CPU_affinity=0,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496313  MPI_rank=000/002  OMP_thread=003/004  CPU=3  NUMA_node=0  CPU_affinity=3,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496313  MPI_rank=000/002  OMP_thread=001/004  CPU=1  NUMA_node=0  CPU_affinity=1,
+srun=2 Host=r5c03cn2.vaughan  Pid=3496313  MPI_rank=000/002  OMP_thread=002/004  CPU=2  NUMA_node=0  CPU_affinity=2,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496361  MPI_rank=000/002                      CPU=0
+srun=3 Host=r5c03cn2.vaughan  Pid=3496361  MPI_rank=000/002  OMP_thread=000/004  CPU=0  NUMA_node=0  CPU_affinity=0,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496361  MPI_rank=000/002  OMP_thread=002/004  CPU=2  NUMA_node=0  CPU_affinity=2,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496361  MPI_rank=000/002  OMP_thread=003/004  CPU=3  NUMA_node=0  CPU_affinity=3,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496361  MPI_rank=000/002  OMP_thread=001/004  CPU=1  NUMA_node=0  CPU_affinity=1,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496362  MPI_rank=001/002                      CPU=32
+srun=3 Host=r5c03cn2.vaughan  Pid=3496362  MPI_rank=001/002  OMP_thread=000/004  CPU=32  NUMA_node=4  CPU_affinity=32,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496362  MPI_rank=001/002  OMP_thread=002/004  CPU=34  NUMA_node=4  CPU_affinity=34,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496362  MPI_rank=001/002  OMP_thread=001/004  CPU=33  NUMA_node=4  CPU_affinity=33,
+srun=3 Host=r5c03cn2.vaughan  Pid=3496362  MPI_rank=001/002  OMP_thread=003/004  CPU=35  NUMA_node=4  CPU_affinity=35,

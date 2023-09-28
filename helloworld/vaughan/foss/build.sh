@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. env.sh
+. env-modules.sh
 
 mkdir -p _build
 cd _build
