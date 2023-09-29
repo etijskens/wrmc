@@ -9,6 +9,7 @@ set -x
 # control placement
 export OMP_PROC_BIND=true
 export I_MPI_PIN_DOMAIN=omp,compact
+# set | grep "PMI_\|MPI_" | sort
 
 # Stop echoing the executed commands to stderr
 set +x
