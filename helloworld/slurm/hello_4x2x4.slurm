@@ -1,14 +1,16 @@
 #!/bin/bash
-#SBATCH --job-name=hello_4x1x8
+#SBATCH --job-name=hello_4x2x4
 #SBATCH --error=%x-%j.e
 #SBATCH --output=%x-%j.o
 #SBATCH --nodes=1
 #SBATCH --exclusive
-#SBATCH --ntasks=4
-#SBATCH --cpus-per-task=8
+#SBATCH --ntasks=8
+#SBATCH --cpus-per-task=4
 #SBATCH --time=00:05:00
 
-. ../env-modules.sh foss
+# get the toolchain from the name of the current directory
+toolchain=${PWD##*/}
+. ../env-modules.sh ${toolchain}
 . ../job-config.sh 4
 . ./placement.sh
 

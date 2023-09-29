@@ -1,4 +1,5 @@
 #!/bin/bash
+# execute this script from its parent directory.
 
 . ./env-modules.sh $1
 if [ "$?" = "1" ]

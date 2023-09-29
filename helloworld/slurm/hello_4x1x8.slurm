@@ -8,7 +8,9 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --time=00:05:00
 
-. ../env-modules.sh foss
+# get the toolchain from the name of the current directory
+toolchain=${PWD##*/}
+. ../env-modules.sh ${toolchain}
 . ../job-config.sh 4
 . ./placement.sh
 

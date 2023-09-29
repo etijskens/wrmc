@@ -82,7 +82,7 @@ main(int argc, char *argv[])
         sched_getaffinity(0, sizeof(coremask), &coremask);
         cpuset_to_cstr(&coremask, cpu_affinity_buf);
         printf // ("Hello from OpenMP thread %d/%d from MPI mpi_rank %d/%d on %s\n",
-          ( "srun=%c Host=%s  Pid=%d  MPI_rank=%.3d/%.3d  OMP_thread=%.3d/%.3d  CPU=%d  NUMA_node=%d  CPU_affinity=%s\n"
+          ( "srun=%c Host=%s  Pid=%d  MPI_rank=%.3d/%.3d  OMP_thread=%.3d/%.3d  CPU=%.3d  NUMA_node=%d  CPU_affinity=%s\n"
           , label
           , host_name, pid
           , mpi_rank, n_mpi_ranks
