@@ -9,12 +9,8 @@
 #SBATCH --time=00:05:00
 #SBATCH --account=astaff
 
-export n_sruns=1
-
-. ./env-modules.sh
+toolchain=intel
+. ../env-modules.sh ${toolchain} && ml vsc-mympirun && ml
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-. ./env-vars.sh
-./prinfo.sh
 
-srun --quiet -n${n_mpi} -c${SLURM_CPUS_PER_TASK} --exclusive --unbuffered ./bin/hello 0
-
+mympirun --hybrid 2 ../intel/bin/hello

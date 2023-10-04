@@ -7,10 +7,11 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=00:05:00
+#SBATCH --account=astaff
 
 # get the toolchain from the name of the current directory
 toolchain=${PWD##*/}
-. ../env-modules.sh ${toolchain}
+. ../env-modules.sh ${toolchain} && ml
 . ../job-config.sh 1
 . ./placement.sh
 

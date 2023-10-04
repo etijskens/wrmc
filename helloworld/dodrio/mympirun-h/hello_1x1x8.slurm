@@ -9,8 +9,8 @@
 #SBATCH --time=00:05:00
 #SBATCH --account=astaff
 
-. ./env-modules.sh
-. ./env-vars.sh
-. ./job-config.sh 1
+toolchain=intel
+. ../env-modules.sh ${toolchain} && ml vsc-mympirun && ml
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun --quiet -n${n_mpi_per_srun} -c${SLURM_CPUS_PER_TASK} --exclusive --unbuffered ./bin/hello
+mympirun --hybrid 1 ../intel/bin/hello
